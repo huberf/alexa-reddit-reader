@@ -1,0 +1,29 @@
+{
+  "intents": [
+    {
+      "intent": "LatestPost",
+      "slots": [
+        {"name": "Subreddit", "type": "SUBREDDIT"}
+      ]
+    },
+    {
+      "intent": "SpecificPost",
+      "slots": [
+        {"name": "Subreddit", "type": "SUBREDDIT"},
+        {
+          "name": "Index",
+          "type": "POST_LOCATION"
+        }
+      ]
+    },
+    {
+      "intent": "AMAZON.HelpIntent"
+    },
+    {
+      "intent": "AMAZON.StopIntent"
+    },
+    {
+      "intent": "AMAZON.CancelIntent"
+    }
+   ]
+}

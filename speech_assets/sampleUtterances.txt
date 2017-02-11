@@ -1,0 +1,14 @@
+LatestPost the latest post in the {Subreddit} subreddit
+LatestPost the latest post in {Subreddit}
+LatestPost the latest in the {Subreddit} subreddit
+LatestPost the latest in {Subreddit}
+LatestPost the latest news in the {Subreddit} subreddit
+LatestPost the latest news in {Subreddit}
+
+SpecificPost the {Index} post in the {Subreddit} subreddit
+SpecificPost the {Index} post in {Subreddit}
+SpecificPost the {Index} article in the {Subreddit} subreddit
+SpecificPost the {Index} article in {Subreddit}
+SpecificPost the {Index} link in the {Subreddit} subreddit
+SpecificPost the {Index} link in {Subreddit}
+SpecificPost the {Index} {Subreddit} post
