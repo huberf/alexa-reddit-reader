@@ -55,7 +55,7 @@ redditReader.intent("SpecificPost",
         res.send();
       })
       console.log('Checking subreddit ' + req.slot('Subreddit').split(" ").join(""));
-      var items = {"1st": 0, "2nd": 1, "3rd": 2, "first": 0, "second": 1, "third": 2, '4th': 3, 'fourth': 3, '5th': 4, 'fifth': 4};
+      var items = require('./numbers');
       var d = require('domain').create();
       d.on('error', function() {
         res.say('Either that subreddit doesn\'t exist or I don\'t have access to it. Try asking for another subreddit.');
@@ -71,7 +71,7 @@ redditReader.intent("SpecificPost",
           }
           posts = data;
           try {
-            res.say("Here is the " + req.slot("Index") + " post in the " + req.slot('Subreddit') + " subreddit. " + posts[(posts.length - 1) - items[req.slot("Index")]].data.title);
+            res.say("Here is the " + req.slot("Index") + " post in the " + req.slot('Subreddit') + " subreddit. " + posts[(posts.length - 1) - items[req.slot("Index") - 1]].data.title);
             res.send();
           } catch(err) {
             res.say("You asked for an incorrect post number. Ask again, requesting only for the first to the fifth one.").shouldEndSession(false).reprompt('I\'m still listening');
