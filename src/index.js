@@ -71,7 +71,7 @@ redditReader.intent("SpecificPost",
           }
           posts = data;
           try {
-            res.say("Here is the " + req.slot("Index") + " post in the " + req.slot('Subreddit') + " subreddit. " + posts[(posts.length - 1) - items[req.slot("Index") - 1]].data.title);
+            res.say("Here is the " + req.slot("Index") + " post in the " + req.slot('Subreddit') + " subreddit. " + posts[(posts.length) - items[req.slot("Index")]].data.title);
             res.send();
           } catch(err) {
             res.say("You asked for an incorrect post number. Ask again, requesting only for the first to the fifth one.").shouldEndSession(false).reprompt('I\'m still listening');
